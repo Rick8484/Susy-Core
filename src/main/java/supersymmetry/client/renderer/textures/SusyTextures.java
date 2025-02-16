@@ -5,6 +5,7 @@ import gregtech.client.renderer.texture.cube.SimpleCubeRenderer;
 import gregtech.client.renderer.texture.cube.SimpleOverlayRenderer;
 import gregtech.client.renderer.texture.cube.SimpleSidedCubeRenderer;
 import gregtech.client.renderer.texture.custom.DrumRenderer;
+import net.minecraft.item.EnumDyeColor;
 import supersymmetry.client.renderer.textures.custom.ExtenderRender;
 
 public class SusyTextures {
@@ -90,4 +91,13 @@ public class SusyTextures {
     public static final SimpleCubeRenderer MASONRY_BRICK = new SimpleCubeRenderer("gregtech:blocks/multiblock_casing/masonry_brick");
 
     public static final DrumRenderer PLASTIC_CAN = new DrumRenderer("storage/drums/plastic_can");
+
+    public static final SimpleCubeRenderer[] METAL_SHEETS = new SimpleCubeRenderer[32];
+
+    static {
+        for (EnumDyeColor color : EnumDyeColor.values()) {
+            METAL_SHEETS[color.getMetadata()] = new SimpleCubeRenderer("gregtech:blocks/decoration/metalsheet_" + color.getName());
+            METAL_SHEETS[color.getMetadata() + 16] = new SimpleCubeRenderer("gregtech:blocks/decoration/large_metalsheet_" + color.getName());
+        }
+    }
 }

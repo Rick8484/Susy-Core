@@ -189,6 +189,8 @@ public class SuSyMetaTileEntities {
 
     public static MetaTileEntityRTG[] RTG = new MetaTileEntityRTG[8];
 
+    public static MetaTileEntityEccentricRollCrusher ECCENTRIC_ROLL_CRUSHER;
+
     public static void init() {
         MAGNETIC_REFRIGERATOR = registerMetaTileEntity(14500, new MetaTileEntityMagneticRefrigerator(susyId("magnetic_refrigerator")));
         COAGULATION_TANK = registerMetaTileEntity(14501, new MetaTileEntityCoagulationTank(susyId("coagulation_tank")));
@@ -207,6 +209,8 @@ public class SuSyMetaTileEntities {
         STEAM_LATEX_COLLECTOR[1] = registerMetaTileEntity(14511, new MetaTileEntitySteamLatexCollector(susyId("latex_collector.steel"), true));
 
         UHMWPE_CAN = registerMetaTileEntity(14512, new MetaTileEntityPlasticCan(susyId("drum.uhmwpe"), new PropertyFluidFilter(425, true, true, true, false), 0xc5e3de, 512_000)); // sadly I have to put it here
+
+        ECCENTRIC_ROLL_CRUSHER = registerMetaTileEntity(14513, new MetaTileEntityEccentricRollCrusher(susyId("eccentric_roll_crusher"), RecipeMaps.MACERATOR_RECIPES));
 
         SINTERING_OVEN = registerMetaTileEntity(14521, new MetaTileEntitySinteringOven(susyId("sintering_oven")));
 
