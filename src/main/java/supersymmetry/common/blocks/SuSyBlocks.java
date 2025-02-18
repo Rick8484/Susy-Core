@@ -10,6 +10,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.jetbrains.annotations.NotNull;
+import supersymmetry.common.tileentities.SuSyTileEntities;
 
 import java.util.Comparator;
 import java.util.EnumMap;
@@ -42,6 +43,7 @@ public class SuSyBlocks {
     public static BlockSerpentine SERPENTINE;
     public static BlocksHardened HARDBLOCKS;
     public static BlocksCustomSheets CUSTOMSHEETS;
+    public static BlockEccentricRoll ECCENTRIC_ROLL;
 
     public static void init() {
         COOLING_COIL = new BlockCoolingCoil();
@@ -108,6 +110,11 @@ public class SuSyBlocks {
 
         CUSTOMSHEETS = new BlocksCustomSheets();
         CUSTOMSHEETS.setRegistryName("custom_sheets");
+
+        ECCENTRIC_ROLL = new BlockEccentricRoll();
+        ECCENTRIC_ROLL.setRegistryName("eccentric_roll");
+
+        SuSyTileEntities.register();
     }
 
     @SideOnly(Side.CLIENT)
@@ -134,6 +141,7 @@ public class SuSyBlocks {
         SERPENTINE.onModelRegister();
         registerItemModel(HARDBLOCKS);
         registerItemModel(CUSTOMSHEETS);
+        registerItemModel(ECCENTRIC_ROLL);
     }
 
     @SideOnly(Side.CLIENT)
