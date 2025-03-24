@@ -1,7 +1,6 @@
 package supersymmetry.api.metatileentity.multiblock;
 
 import cam72cam.immersiverailroading.IRBlocks;
-import gregtech.api.metatileentity.multiblock.MultiblockControllerBase;
 import gregtech.api.pattern.PatternStringError;
 import gregtech.api.pattern.TraceabilityPredicate;
 import gregtech.api.util.BlockInfo;
